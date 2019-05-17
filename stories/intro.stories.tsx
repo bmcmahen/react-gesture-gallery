@@ -30,7 +30,7 @@ function Example() {
   ];
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ background: "black", width: "100vw", height: "100vh" }}>
       <Gallery
         index={index}
         onRequestChange={i => {
@@ -38,7 +38,7 @@ function Example() {
         }}
       >
         {images.map(img => (
-          <GalleryImage objectFit="contain" key={img.src} src={img.src} />
+          <GalleryImage objectFit="cover" key={img.src} src={img.src} />
         ))}
       </Gallery>
     </div>

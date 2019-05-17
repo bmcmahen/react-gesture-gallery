@@ -1,18 +1,23 @@
 import * as React from "react";
 import GestureView, { GestureViewHandles } from "react-gesture-view";
 import { ArrowRight, ArrowLeft } from "./Icons";
+import { Indicators } from "./Indicators";
 
 interface GalleryProps extends React.HTMLAttributes<HTMLDivElement> {
   index: number;
   onRequestChange: (i: number) => void;
   children: React.ReactNodeArray;
   enableKeyboard?: boolean;
+  enableIndicators?: boolean;
+  enableControls?: boolean;
 }
 
 export function Gallery({
   index,
   onRequestChange,
   enableKeyboard = true,
+  enableIndicators = true,
+  enableControls = true,
   children,
   ...other
 }: GalleryProps) {
@@ -109,32 +114,43 @@ export function Gallery({
       >
         {children}
       </GestureView>
-      <NavigationArrow
-        aria-label="Show previous image"
-        hidden={!hasPrev}
-        visible={showControls && hasPrev}
-        onClick={() => {
-          onRequestChange(index - 1);
-        }}
-        style={{
-          left: "1rem"
-        }}
-      >
-        <ArrowLeft />
-      </NavigationArrow>
-      <NavigationArrow
-        aria-label="Show next image"
-        hidden={!hasNext}
-        visible={showControls && hasNext}
-        onClick={() => {
-          onRequestChange(index + 1);
-        }}
-        style={{
-          right: "1rem"
-        }}
-      >
-        <ArrowRight />
-      </NavigationArrow>
+      {enableControls && (
+        <React.Fragment>
+          <NavigationArrow
+            aria-label="Show previous image"
+            hidden={!hasPrev}
+            visible={showControls && hasPrev}
+            onClick={() => {
+              onRequestChange(index - 1);
+            }}
+            style={{
+              left: "1rem"
+            }}
+          >
+            <ArrowLeft />
+          </NavigationArrow>
+          <NavigationArrow
+            aria-label="Show next image"
+            hidden={!hasNext}
+            visible={showControls && hasNext}
+            onClick={() => {
+              onRequestChange(index + 1);
+            }}
+            style={{
+              right: "1rem"
+            }}
+          >
+            <ArrowRight />
+          </NavigationArrow>
+        </React.Fragment>
+      )}
+      {enableIndicators && (
+        <Indicators
+          visible={showControls}
+          count={totalChildren}
+          index={index}
+        />
+      )}
     </div>
   );
 }
