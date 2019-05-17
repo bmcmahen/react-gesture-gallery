@@ -1,4 +1,14 @@
+<div align="center">
+ <img 
+    max-width="300px"
+    alt="A demo showing images being swiped left or right."
+     src="https://raw.githubusercontent.com/bmcmahen/react-gesture-gallery/master/demo.gif">
+</div>
+
 # react-gesture-gallery
+
+[![npm package](https://img.shields.io/npm/v/react-gesture-gallery/latest.svg)](https://www.npmjs.com/package/react-gesture-gallery)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/benmcmahen.svg?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benmcmahen)
 
 A simple image gallery built with react which works nicely on desktop and mobile devices.
 
