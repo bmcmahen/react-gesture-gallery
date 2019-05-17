@@ -67,8 +67,8 @@ function Example() {
 
 | Name               | Type                 | Default Value | Description                                   |
 | ------------------ | -------------------- | ------------- | --------------------------------------------- |
-| index \_           | number               |               | The index of gallery to show                  |
-| onRequestChange \_ | (i: number) => void; |               | A callback requesting the active image change |
+| index \*           | number               |               | The index of gallery to show                  |
+| onRequestChange \* | (i: number) => void; |               | A callback requesting the active image change |
 | enableKeyboard     | boolean              | true          | Enable keyboard controls                      |
 | children \*        | GalleryImage[]       |               | A set of gallery images to diplay             |
 | enableControls     | boolean              | true          | Enable back and forward arrows                |
