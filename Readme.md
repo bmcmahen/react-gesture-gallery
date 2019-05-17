@@ -71,6 +71,8 @@ function Example() {
 | onRequestChange \_ | (i: number) => void; |               | A callback requesting the active image change |
 | enableKeyboard     | boolean              | true          | Enable keyboard controls                      |
 | children \*        | GalleryImage[]       |               | A set of gallery images to diplay             |
+| enableControls     | boolean              | true          | Enable back and forward arrows                |
+| enableIndicators   | boolean              | true          | Enable back and forward indicators            |
 
 ### GalleryImage
 

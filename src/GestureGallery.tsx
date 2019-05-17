@@ -145,11 +145,7 @@ export function Gallery({
         </React.Fragment>
       )}
       {enableIndicators && (
-        <Indicators
-          visible={showControls}
-          count={totalChildren}
-          index={index}
-        />
+        <Indicators visible count={totalChildren} index={index} />
       )}
     </div>
   );
