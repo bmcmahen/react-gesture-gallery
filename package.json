@@ -17,6 +17,20 @@
     "build": "yarn run build-esm && yarn run build-other",
     "prepublishOnly": "yarn run build"
   },
+  "keywords": [
+    "react",
+    "gesture",
+    "gallery",
+    "carousel",
+    "react-spring"
+  ],
+  "bugs": {
+    "url": "https://github.com/bmcmahen/react-gesture-gallery/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmcmahen/react-gesture-gallery.git"
+  },
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
