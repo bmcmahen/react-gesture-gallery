@@ -7,10 +7,12 @@ A simple image gallery built with react which works nicely on desktop and mobile
 Install `react-gesture-gallery` and its peer dependency, `react-gesture-responder` using yarn or npm.
 
 ```
-yarn add react-gesture-gallery
+yarn add react-gesture-gallery react-gesture-responder
 ```
 
 ## Basic usage
+
+By default, the gallery will attempt to fit into its container using `height: 100%` and `width: 100%`, so you should generally provide a container with a set width and height. For a full-screen gallery, using `width: 100vw` and `height: 100vh`. Note that this library doesn't display in a modal by default, but it's easy enough to provide your own.
 
 ```jsx
 import * as React from "react";
@@ -78,3 +80,7 @@ function Example() {
 | srcSet    | string |               | The image source set  |
 | alt       | string |               | Alt tag for the image |
 | objectFit | 'cover | contain'      | 'contain'             | How to display the image |
+
+## License
+
+MIT
