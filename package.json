@@ -19,7 +19,8 @@
   },
   "peerDependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-gesture-responder": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
@@ -38,6 +39,7 @@
     "jest": "^24.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-gesture-responder": "^2.1.0",
     "rimraf": "^2.6.3",
     "rollup": "^1.7.4",
     "rollup-plugin-babel": "^4.3.2",
@@ -56,7 +58,6 @@
   "dependencies": {
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.3",
-    "react-gesture-responder": "^2.1.0",
     "react-gesture-view": "^2.1.0",
     "tslib": "^1.9.3"
   },
