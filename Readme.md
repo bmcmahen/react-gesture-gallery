@@ -10,7 +10,7 @@
 [![npm package](https://img.shields.io/npm/v/react-gesture-gallery/latest.svg)](https://www.npmjs.com/package/react-gesture-gallery)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/benmcmahen.svg?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benmcmahen)
 
-A simple image gallery built with react which works nicely on desktop and mobile devices.
+A simple image gallery built with react which works nicely on desktop and mobile devices. [View the demo](https://codesandbox.io/embed/react-gesture-gallery-dup51)
 
 ## Install
 
