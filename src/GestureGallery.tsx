@@ -55,6 +55,7 @@ export function Gallery({
   const timerRef = React.useRef<any>(null);
 
   const [showControls, setShowControls] = React.useState(false);
+  const [hover, setHover] = React.useState(false);
 
   /**
    * Enable 'hover' based controls
@@ -76,6 +77,14 @@ export function Gallery({
     return () => {
       clearTimeout(timerRef.current);
     };
+  }
+
+  function onEnter() {
+    setHover(true);
+  }
+
+  function onLeave() {
+    setHover(false);
   }
 
   return (
@@ -119,7 +128,9 @@ export function Gallery({
           <NavigationArrow
             aria-label="Show previous image"
             hidden={!hasPrev}
-            visible={showControls && hasPrev}
+            onEnter={onEnter}
+            onLeave={onLeave}
+            visible={(hover || showControls) && hasPrev}
             onClick={() => {
               onRequestChange(index - 1);
             }}
@@ -132,7 +143,9 @@ export function Gallery({
           <NavigationArrow
             aria-label="Show next image"
             hidden={!hasNext}
-            visible={showControls && hasNext}
+            visible={(hover || showControls) && hasNext}
+            onEnter={onEnter}
+            onLeave={onLeave}
             onClick={() => {
               onRequestChange(index + 1);
             }}
@@ -158,6 +171,8 @@ interface NavigationArrowProps {
   onClick: () => void;
   children: React.ReactNode;
   "aria-label": string;
+  onEnter: () => void;
+  onLeave: () => void;
 }
 
 export function NavigationArrow({
@@ -165,6 +180,8 @@ export function NavigationArrow({
   children,
   "aria-label": label,
   onClick,
+  onEnter,
+  onLeave,
   visible,
   style
 }: NavigationArrowProps) {
@@ -173,6 +190,8 @@ export function NavigationArrow({
       className="Gallery__NavigationArrow"
       aria-label={label}
       aria-hidden={hidden}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
       style={{
         position: "absolute",
         top: "50%",
