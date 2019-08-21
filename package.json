@@ -72,7 +72,7 @@
   "dependencies": {
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.3",
-    "react-gesture-view": "^2.1.0",
+    "react-page-controller": "^3.0.2",
     "tslib": "^1.9.3"
   },
   "sideEffects": false
