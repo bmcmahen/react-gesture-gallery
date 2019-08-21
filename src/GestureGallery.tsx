@@ -1,10 +1,10 @@
 import * as React from "react";
-import GestureView from "react-page-controller";
+import GestureView, { PagerIndex } from "react-page-controller";
 import { ArrowRight, ArrowLeft } from "./Icons";
 import { Indicators } from "./Indicators";
 
-interface GalleryProps extends React.HTMLAttributes<HTMLDivElement> {
-  index: number;
+export interface GalleryProps extends React.HTMLAttributes<HTMLDivElement> {
+  index: PagerIndex;
   onRequestChange: (i: number) => void;
   children: React.ReactNodeArray;
   enableKeyboard?: boolean;
@@ -13,7 +13,7 @@ interface GalleryProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function Gallery({
-  index,
+  index: providedIndex,
   onRequestChange,
   enableKeyboard = true,
   enableIndicators = true,
@@ -21,6 +21,15 @@ export function Gallery({
   children,
   ...other
 }: GalleryProps) {
+  // optionally allow the user to pass in an object
+  // with an index and animated property. This allows
+  // the user to skip to an index without animating.
+
+  let { immediate, index } =
+    typeof providedIndex === "number"
+      ? { immediate: false, index: providedIndex }
+      : providedIndex;
+
   function onKeyDown(e: KeyboardEvent) {
     // left
     if (e.keyCode === 37) {
@@ -105,7 +114,7 @@ export function Gallery({
           width: "100%",
           height: "100%"
         }}
-        value={index}
+        value={providedIndex}
         onRequestChange={onRequestChange}
         lazyLoad
         onSetLazy={i => {

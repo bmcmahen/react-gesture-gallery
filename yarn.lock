@@ -8187,10 +8187,10 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
 
-react-page-controller@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-page-controller/-/react-page-controller-3.0.2.tgz#78efabe3744cde8b8d93364bd1b9e65f64ddd5c7"
-  integrity sha512-PQ+TMXFUsJg30W9OVA/iGyJMJP59j/w4JBOJRaXatwiF38z4cUJoT2AJGN+y28GNGCqk/RBvvz3OTdNv40uq4A==
+react-page-controller@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-page-controller/-/react-page-controller-3.1.0.tgz#d8636db9610dcb890c3521a40e52cc4408d8352a"
+  integrity sha512-DlxVC/wOcbsiEEOp5LTUfKsJEGi8SfvLyGJMONSP5cOEQEI+MO/FKNSB8IwOgkit8MccT9PPZYDchNqcORQvNQ==
   dependencies:
     "@types/classnames" "^2.2.7"
     "@types/react" "^16.8.10"
