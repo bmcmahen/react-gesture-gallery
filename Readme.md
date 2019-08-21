@@ -88,12 +88,12 @@ function Example() {
 
 ### GalleryImage
 
-| Name      | Type   | Default Value | Description           |
-| --------- | ------ | ------------- | --------------------- |
-| src \*    | string |               | The image source      |
-| srcSet    | string |               | The image source set  |
-| alt       | string |               | Alt tag for the image |
-| objectFit | 'cover | contain'      | 'contain'             | How to display the image |
+| Name      | Type               | Default Value | Description              |
+| --------- | ------------------ | ------------- | ------------------------ |
+| src \*    | string             |               | The image source         |
+| srcSet    | string             |               | The image source set     |
+| alt       | string             |               | Alt tag for the image    |
+| objectFit | 'cover \| contain' | contain       | How to display the image |
 
 ## License
 
